@@ -1,6 +1,6 @@
 # 🎓 College Admission Predictive Analysis
 
-### *Predictive Analytics & Machine Learning — Term Project (ISOM 835)*
+### *Predictive Analytics & Machine Learning - Term Project (ISOM 835)*
 
 | | | | |
 | :---: | :---: | :---: | :---: |
@@ -30,7 +30,7 @@ This project implements a full end-to-end **predictive analytics and machine lea
 - Understanding the **key drivers** behind admission outcomes
 - Ensuring fairness, transparency, and responsible AI principles in deployment
 
-Deliverables include a **Google Colab notebook**, **GitHub repository**, and a **10–12 page final report** summarizing methodology, results, and strategic business insights.
+Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a **Final PDF Report** summarizing methodology, results, and strategic business insights.
 
 ---
 
@@ -68,8 +68,9 @@ Deliverables include a **Google Colab notebook**, **GitHub repository**, and a *
 
 ## 🔍 Exploratory Data Analysis (EDA) <a id="exploratory-data-analysis-eda"></a>
 
-📄 **Google Colab Notebook:**  
-👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing
+📄 **Google Colab Notebook Link:* [ISOM 835_Individual Term Project.ipynb](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
+
+https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing 
 
 ### EDA Highlights
 
@@ -175,10 +176,9 @@ A full ethics analysis is included in the final report.
 
 ---
 
-## 📝 Final Report (10–12 Pages) <a id="final-report-1012-pages"></a>
+## 📝 Final PDF Report (29 Pages) <a id="final-report-29-pages"></a>
 
-📥 *Upload your final PDF and insert the link:*  
-👉 **[Insert PDF Link Here]**
+👉 *PDF File link:* [ISOM835_FinalAssignmentReport_AnNguyen_UID010043123.pdf](https://drive.google.com/file/d/1ryhMSP1VY_GbJrpTVEWU9CpJkwltuVbp/view?usp=sharing)
 
 ### Report Sections
 1. Executive Summary  
