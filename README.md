@@ -238,8 +238,7 @@ The following academic and technical references informed the modeling choices, e
 
 - Breiman, L. (2001). **Random Forests**. *Machine Learning*.  
 - Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression*.  
-- Ribeiro, M. T., Singh, S., & Guestrin, C. (2016).  
-  “**Why Should I Trust You?**: Explaining the Predictions of Any Classifier.”  
+- Ribeiro, M. T., Singh, S., & Guestrin, C. (2016). “**Why Should I Trust You?**: Explaining the Predictions of Any Classifier.”  
 - High-level Responsible AI and fairness guidelines from:
   - OECD AI Principles  
   - Google Responsible AI documentation  
