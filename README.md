@@ -1,8 +1,5 @@
-<h1 style="color:#003366; font-size: 36px; font-weight: 800; margin-bottom: 4px;">
-🎓 College Admission Predictive Analysis
-</h1>
-<hr style="border: 0; height: 4px; background-color: #F2C000; margin-top: 0; margin-bottom: 20px;">
-
+# 🎓 College Admission Predictive Analysis 
+### *Predictive Analytics & Machine Learning - Term Project (ISOM 835)*
 
 | | | | |
 | :---: | :---: | :---: | :---: |
