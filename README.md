@@ -124,7 +124,7 @@ Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a *
 ### Evaluation Metrics  
 | Task | Metrics |
 | :--- | :--- |
-| **Regression** | RMSE, MAE, R^2 |
+| **Regression** | RMSE, MAE, R² |
 | **Classification** | Accuracy, F1, Precision, Recall, Confusion Matrix, ROC-AUC |
 
 ---
