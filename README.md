@@ -1,12 +1,14 @@
-# 🎓 College Admission Predictive Analysis
+<h1 style="color:#003366;">🎓 College Admission Predictive Analysis</h1>
 
-### *Predictive Analytics & Machine Learning - Term Project (ISOM 835)*
+<h3 style="color:#003366;">*Predictive Analytics & Machine Learning - Term Project (ISOM 835)*</h3>
 
 | | | | |
 | :---: | :---: | :---: | :---: |
 | **Professor** | Hasan Arslan | **Project Type** | Individual |
 | **Student** | Pham Thien An, Nguyen | **Student ID** | UID010043123 |
 | **Due Date** | December 12, 11:59 PM | | |
+
+<hr style="border: 2px solid #FFD700;">
 
 ---
 
