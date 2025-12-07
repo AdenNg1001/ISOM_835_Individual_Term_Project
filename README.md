@@ -7,8 +7,6 @@
 | **Student** | Pham Thien An, Nguyen | **Student ID** | UID010043123 |
 | **Due Date** | December 12, 11:59 PM | | |
 
-<hr style="border: 2px solid #FFD700;">
-
 ---
 
 ## 🚀 Quick Navigation
