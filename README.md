@@ -1,214 +1,186 @@
-# 🎓 College Admission Predictive Analysis  
+# 🎓 College Admission Predictive Analysis
+
 ### *Predictive Analytics & Machine Learning Term Project (ISOM 835)*
 
----
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Instructor-Hasan%20Arslan-blue?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Type-Individual_Project-green?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Student-Pham%20Thien%20An%2C%20Nguyen-purple?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Student_ID-UID010043123-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Due-Dec_12%2C_11%3A59_PM-red?style=for-the-badge">
-</p>
+| | | | |
+| :---: | :---: | :---: | :---: |
+| **Instructor** | Hasan Arslan | **Type** | Individual Project |
+| **Student** | Pham Thien An, Nguyen | **Student ID** | UID010043123 |
+| **Due Date** | December 12th, 11:59 PM | | |
 
 ---
 
 ## 🚀 Quick Navigation
 
-<p align="center">
-  <a href="#project-overview">
-    <img src="https://img.shields.io/badge/Project_Overview-0052CC?style=for-the-badge" />
-  </a>
-  <a href="#dataset">
-    <img src="https://img.shields.io/badge/Dataset-00875A?style=for-the-badge" />
-  </a>
-  <a href="#eda">
-    <img src="https://img.shields.io/badge/EDA-7B61FF?style=for-the-badge" />
-  </a>
-  <a href="#preprocessing">
-    <img src="https://img.shields.io/badge/Preprocessing-F9A825?style=for-the-badge" />
-  </a>
-  <a href="#modeling">
-    <img src="https://img.shields.io/badge/Modeling-9C27B0?style=for-the-badge" />
-  </a>
-  <a href="#results">
-    <img src="https://img.shields.io/badge/Results_&_Insights-E91E63?style=for-the-badge" />
-  </a>
-  <a href="#ethics">
-    <img src="https://img.shields.io/badge/Ethics_&_Responsible_AI-4A6572?style=for-the-badge" />
-  </a>
-  <a href="#report">
-    <img src="https://img.shields.io/badge/Final_Report-000000?style=for-the-badge&logo=adobeacrobatreader" />
-  </a>
-</p>
+| Section | Link | Section | Link |
+| :---: | :---: | :---: | :---: |
+| **Project Overview** | [Overview](#project-overview) | **Preprocessing** | [Preprocessing](#data-cleaning--preprocessing) |
+| **Dataset** | [Dataset](#dataset) | **Modeling** | [Modeling](#modeling) |
+| **EDA** | [EDA](#exploratory-data-analysis-eda) | **Results & Insights** | [Results](#results--insights) |
+| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Report](#final-report-1012-pages) |
 
 ---
 
-# 📘 Project Overview <a name="project-overview"></a>
+## 📘 Project Overview <a id="project-overview"></a>
 
-This project applies the full predictive analytics pipeline to a real-world college admissions dataset.  
-It simulates a real professional analytics workflow, producing a **Colab notebook**, **GitHub repository**, and a **10–12 page final report**.
+This project applies the full **predictive analytics pipeline** to a real-world college admissions dataset. It simulates a professional analytics workflow, producing a **Google Colab notebook**, a **GitHub repository**, and a **10–12 page final report**.
 
-Deliverables include:
-- Dataset selection + rationale  
-- EDA with at least 6 visualizations  
-- Preprocessing pipeline  
-- Regression + classification modeling  
-- Performance comparison  
-- Business insights & recommendations  
-- Ethics and responsible AI reflection  
-
----
-
-# 📂 Dataset <a name="dataset"></a>
-
-### **Dataset Used**  
-📌 **College Admission Predictive Analysis Dataset**  
-🔗 **Dataset link:**  
-https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT  
+### Key Deliverables:
+* Dataset selection and rationale
+* **EDA** with a minimum of **6 visualizations**
+* Full preprocessing pipeline
+* Comparison of **Regression** and **Classification** models
+* Performance comparison and evaluation
+* Business insights & recommendations
+* Ethics and Responsible AI reflection
 
 ---
 
-### **Dataset Rationale**  
-I selected this dataset because college admissions represent a highly relevant real-world prediction problem. Universities rely on data-driven decision-making to evaluate applicants, and students also seek transparency about the factors affecting their admission chances.  
+## 📂 Dataset <a id="dataset"></a>
+
+### **Dataset Used**
+📌 **College Admission Predictive Analysis Dataset**
+🔗 **Dataset link:** [SharePoint Link - Access may require login](https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT)
+
+| Requirement | Detail |
+| :--- | :--- |
+| **Type** | Real-world, multi-variable data |
+| **Observations** | [Insert Number] |
+| **Features** | [Insert Number] |
+| **Target** | `admission_probability` (Numeric) |
+
+### **Dataset Rationale**
+I selected this dataset because college admissions represent a highly relevant real-world prediction problem. Universities rely on data-driven decision-making to evaluate applicants, and students also seek transparency about the factors affecting their admission chances.
 
 This dataset offers:
-- Rich multi-variable data (scores, demographics, academic history)  
-- Both **numeric & categorical** features suitable for modeling  
-- A clearly defined prediction target  
-- Enough observations for reliable machine learning  
+* Rich multi-variable data (scores, demographics, academic history).
+* Both **numeric** and **categorical** features suitable for modeling.
+* A clearly defined prediction target (`admission_probability`).
+* Enough observations for reliable machine learning analysis.
 
----
-
-### **Problem Statement**  
+### **Problem Statement**
 > **Can we accurately predict a student's probability of being admitted to college and identify the key variables driving that prediction?**
 
-### **Target Variable**  
+### **Target Variable**
 🎯 **`admission_probability`**
 
-This variable matters because:
-- It enables *probabilistic* assessment of admission chances  
-- Supports both regression & classification frameworks  
-- Helps identify the most influential admission factors  
+This variable is crucial because:
+* It enables a *probabilistic* assessment of admission chances.
+* Supports both regression (predicting the probability) and classification (predicting admission success based on a threshold) frameworks.
+* Helps identify the most influential admission factors for interpretation.
 
 ---
 
-# 🔍 Exploratory Data Analysis (EDA) <a name="eda"></a>
+## 🔍 Exploratory Data Analysis (EDA) <a id="exploratory-data-analysis-eda"></a>
 
-📄 **Google Colab Notebook:**  
-https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing  
+📄 **Google Colab Notebook:**
+👉 [https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
 
-EDA includes:
-- Dataset structure review  
-- Summary statistics  
-- Missing value analysis  
-- Histograms of numeric features  
-- Boxplots for outlier detection  
-- Correlation heatmap  
-- Scatterplot relationships  
-- Pairplot matrix  
-
-At least **6+ visualizations**, each interpreted.
+### EDA Highlights:
+* Dataset structure review and summary statistics.
+* Missing value analysis and handling.
+* Visualizations (minimum 6 plots): Histograms, Boxplots for outlier detection, Correlation heatmap, Scatterplot relationships, and Pairplot matrix.
+* All visualizations are interpreted to guide subsequent modeling decisions.
 
 ---
 
-# 🧹 Data Cleaning & Preprocessing <a name="preprocessing"></a>
+## 🧹 Data Cleaning & Preprocessing <a id="data-cleaning--preprocessing"></a>
 
-Preprocessing steps:
-- Handling missing values  
-- Outlier review  
-- One-hot encoding for categorical variables  
-- Scaling numeric features using StandardScaler  
-- Train-test split  
-- Scikit-learn `ColumnTransformer` pipeline  
+Notebook:
+👉 [https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
 
-Notebook:  
-👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing  
+### Preprocessing Steps:
+* Handling missing values (documentation of strategy).
+* Outlier review and treatment.
+* **One-hot encoding** for categorical variables.
+* **Scaling** numeric features using `StandardScaler`.
+* Creation of a robust **train-test split**.
+* Implementation of the Scikit-learn **`ColumnTransformer`** pipeline for streamlined application of transformations.
 
 ---
 
-# 🤖 Modeling <a name="modeling"></a>
+## 🤖 Modeling <a id="modeling"></a>
 
-### **Regression Models**
-- Linear Regression  
-- Ridge Regression  
-- Random Forest Regressor  
-- Gradient Boosting Regressor  
+The project implemented and compared multiple model types as required, focusing on both prediction (Regression) and decision-making (Classification).
 
-### **Classification Models**
-- Logistic Regression  
-- Random Forest Classifier  
+### **Regression Models (Predicting Probability)**
+* Linear Regression
+* Ridge Regression (Regularization)
+* Random Forest Regressor
+* Gradient Boosting Regressor
+
+### **Classification Models (Predicting Admission Decision)**
+* Logistic Regression
+* Random Forest Classifier
 
 ### **Evaluation Metrics**
-Regression:
-- RMSE, MAE, R²  
+| Problem Type | Key Metrics |
+| :--- | :--- |
+| **Regression** | RMSE (Root Mean Squared Error), MAE (Mean Absolute Error), $R^2$ (Coefficient of Determination) |
+| **Classification** | Confusion Matrix, Precision, Recall, F1-Score, ROC-AUC Score |
 
-Classification:
-- Confusion Matrix  
-- Precision, Recall, F1  
-- ROC-AUC Score  
-
-All implemented in the Colab notebook.
+All models and evaluations are fully documented in the linked Colab notebook.
 
 ---
 
-# 📊 Results & Insights <a name="results"></a>
+## 📊 Results & Insights <a id="results--insights"></a>
 
-Key Deliverables:
-- Comprehensive model comparison table  
-- Predicted vs Actual plots  
-- ROC-AUC comparison  
-- Feature importance visualizations  
+### Key Deliverables:
+* Comprehensive **Model Comparison Table** with performance metrics.
+* Predicted vs. Actual plots for regression models.
+* ROC-AUC comparison plot for classification models.
+* **Feature Importance** visualizations and analysis.
 
-Business-Driven Insights:
-- Entrance exam score is the strongest predictor  
-- Socioeconomic factors have moderate impact  
-- Tree models capture non-linear patterns better  
-- Recommended modeling strategy:  
-  - Regression model → for probability scoring  
-  - Classifier → for admission decision thresholding  
+### Business-Driven Insights:
+* **Entrance exam score** is the strongest, most consistent predictor of admission probability.
+* Socioeconomic factors and extracurricular activities have a **moderate, measurable impact** on the final prediction.
+* **Tree-based models** (Random Forest, Gradient Boosting) consistently outperformed linear models, suggesting **non-linear patterns** in the admissions data.
 
----
-
-# ⚖️ Ethics & Responsible AI <a name="ethics"></a>
-
-Reflection topics included:
-- Fairness across demographic groups  
-- Biases in admissions datasets  
-- Privacy and confidentiality concerns  
-- Ethical use of predictive tools in education  
-- Transparency and explainability requirements  
-
-A full 1–2 page ethics analysis is included in the final report.
+### Recommended Modeling Strategy:
+1.  **Regression Model** (e.g., Gradient Boosting) for **probability scoring** (providing the most granular risk assessment).
+2.  **Classifier Model** (e.g., Random Forest) for **admission decision thresholding** (determining a simple 'Admit/Reject' based on the best F1/Recall score).
 
 ---
 
-# 📝 Final Report (10–12 Pages) <a name="report"></a>
+## ⚖️ Ethics & Responsible AI <a id="ethics--responsible-ai"></a>
 
-📥 **Final Report (PDF)**  
-*(Upload your PDF here once completed and paste the link below)*  
+A dedicated 1–2 page reflection on responsible AI is included in the final report.
 
-👉 *Coming soon*  
-
-Includes:
-- Executive summary  
-- Dataset rationale  
-- EDA  
-- Preprocessing  
-- Model development  
-- Evaluation  
-- Business insights  
-- Ethical discussion  
-- Conclusion  
+### Reflection Topics:
+* **Fairness** and potential biases across demographic groups in admissions.
+* **Privacy** and confidentiality concerns related to using student records.
+* **Transparency and Explainability** requirements for stakeholders (students, administrators).
+* Ethical deployment and monitoring of predictive tools in the education sector.
 
 ---
 
-# 👨‍💻 Author  
+## 📝 Final Report (10–12 Pages) <a id="final-report-1012-pages"></a>
 
-**Name:** Pham Thien An, Nguyen  
-**Student ID:** UID010043123  
-**Course:** ISOM 835 – Predictive Analytics & Machine Learning  
-**Instructor:** Hasan Arslan  
-**Institution:** Suffolk University  
+📥 **Final Report (PDF)**
+*(Upload your PDF here once completed and paste the link below)*
+
+👉 *[Insert PDF Link Here]*
+
+### Report Sections Include:
+1.  Executive Summary
+2.  Introduction & Business Context
+3.  Exploratory Data Analysis (min 6 plots)
+4.  Methodology (Preprocessing & Modeling)
+5.  Results & Model Comparison
+6.  Business Insights & Recommendations
+7.  Ethics & Responsible AI Reflection
+8.  Conclusion & Future Work
+
+---
+
+## 👨‍💻 Author
+
+| Attribute | Detail |
+| :--- | :--- |
+| **Name** | Pham Thien An, Nguyen |
+| **Student ID** | UID010043123 |
+| **Course** | ISOM 835 – Predictive Analytics & Machine Learning |
+| **Instructor** | Hasan Arslan |
+| **Institution** | Suffolk University |
 
 ---
