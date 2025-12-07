@@ -14,10 +14,11 @@
 
 | Section | Link | Section | Link |
 | :---: | :---: | :---: | :---: |
-| **Overview** | [Project Overview](#project-overview) | **Preprocessing** | [Preprocessing](#data-cleaning--preprocessing) |
-| **Dataset** | [Dataset](#dataset) | **Modeling** | [Modeling](#modeling) |
-| **EDA** | [EDA](#exploratory-data-analysis-eda) | **Results** | [Results & Insights](#results--insights) |
-| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final Report](#final-report-1012-pages) |
+| **Overview** | [Project Overview](#project-overview) | **Dataset** | [Dataset](#dataset) |
+| **EDA** | [EDA](#exploratory-data-analysis-eda) | **Preprocessing** | [Data Cleaning & Preprocessing](#data-cleaning--preprocessing) |
+| **Modeling** | [Modeling](#modeling) | **Results** | [Results & Insights](#results--insights) |
+| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final PDF Report (29 Pages)](#final-report-29-pages) |
+| **Citations** | [Citations & References](#citations--references) | | |
 
 ---
 
@@ -267,7 +268,7 @@ All libraries are open-source and used under their respective licenses for acade
 ### AI Assistance Acknowledgment
 
 Portions of the project documentation and report text (including wording refinement, structure, and explanation clarity) were assisted by **OpenAI ChatGPT** and **Google Gemini**.  
-All code implementation, experimental design, model selection, and final interpret
+All code implementation, experimental design, model selection, and final interpretations were performed and validated by the student.
 
 ---
 
