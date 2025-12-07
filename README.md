@@ -23,42 +23,46 @@
 
 ## 📘 Project Overview <a id="project-overview"></a>
 
-This project delivers a complete **end-to-end predictive analytics workflow** applied to a real-world college admissions dataset. It follows professional machine learning standards and includes a full **Google Colab notebook**, **GitHub repository**, and a structured **10–12 page report**.
+This project implements a full end-to-end **predictive analytics and machine learning pipeline** using a real-world **college admission dataset (25,000 records, 13 features)**. The goal is to assist universities in:
 
-### 🔑 Key Deliverables
-- Dataset acquisition & justification  
-- **EDA** with 6+ visualizations  
-- Full preprocessing pipeline  
-- Regression & classification model development  
-- Performance evaluation & comparison  
-- Business insights & actionable recommendations  
-- Ethics & Responsible AI considerations  
+- Predicting **admission probability** (regression)
+- Classifying students as **admitted vs. not admitted** (classification)
+- Understanding the **key drivers** behind admission outcomes
+- Ensuring fairness, transparency, and responsible AI principles in deployment
+
+Deliverables include a **Google Colab notebook**, **GitHub repository**, and a **10–12 page final report** summarizing methodology, results, and strategic business insights.
 
 ---
 
 ## 📂 Dataset <a id="dataset"></a>
 
-### Dataset Used  
-📌 **College Admission Predictive Analysis Dataset**  
-🔗 *Dataset link:*  
-[SharePoint (Login Required)](https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT)
+### Dataset Details  
+📌 **College Admissions Dataset (25,000 rows × 13 features)**  
+🔗 *Dataset link:* [SharePoint (login required)](https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT)
 
-| Requirement | Description |
-| :--- | :--- |
-| **Type** | Real-world, multivariable dataset |
-| **Observations** | 25,000 |
-| **Features** | 13 |
-| **Target Variable** | `admission_probability` |
+### Feature Types
+**Numeric Features**
+- age  
+- entrance_score  
+- board_percentage  
+- extracurricular_score  
+- admission_probability  
 
-### Why This Dataset?
-College admissions involve complex decision-making influenced by academic, demographic, and extracurricular factors. This dataset is ideal because it offers:
-- A rich blend of **numeric and categorical variables**  
-- A defined prediction target suitable for regression and classification  
-- High relevance for educational institutions and applicants  
-- Sufficient data size for robust modeling  
+**Categorical Features**
+- gender  
+- category  
+- state  
+- preferred_stream  
+- entrance_exam  
+- admission_status  
+- scholarship_eligibility  
 
-### 🎯 Problem Statement
-> **Can we accurately predict a student’s likelihood of admission and identify the variables that most strongly influence admissions decisions?**
+### Target Variables  
+- **Regression:** `admission_probability`  
+- **Classification:** `admitted` (binary label created using threshold 0.5)  
+
+### Problem Statement  
+> **Can we accurately predict admission outcomes and identify the factors that most strongly influence them?**
 
 ---
 
@@ -68,105 +72,124 @@ College admissions involve complex decision-making influenced by academic, demog
 👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing
 
 ### EDA Highlights
-- Dataset structure, datatypes, and descriptive statistics  
-- Missing value exploration and treatment strategy  
-- Outlier examination using boxplots  
-- **6+ visualizations**, including:  
-  - Histograms  
-  - Pairplots  
-  - Scatterplots  
-  - Correlation heatmap  
-- Insights guided preprocessing and modeling choices  
+
+- Dataset summary statistics (25,000 observations)
+- No missing values detected
+- Several visualizations:
+  - Histograms (numeric features)
+  - Boxplots (outlier detection)
+  - Correlation heatmap
+  - Scatterplot (Entrance Score vs. Admission Probability)
+  - Gender comparison bar plot
+  - Pairplot scatter matrix
+- Key numerical insights:
+  - **Board Percentage (0.73)** → strongest correlation with admission
+  - **Entrance Score (0.55)** → second strongest predictor
+  - **Extracurricular Score (0.40)** → moderate influence
+  - Demographics show minimal predictive correlation
 
 ---
 
 ## 🧹 Data Cleaning & Preprocessing <a id="data-cleaning--preprocessing"></a>
 
-Notebook:  
-👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing
+### Preprocessing Steps (as implemented)
 
-### 🔧 Preprocessing Workflow
-- Systematic handling of missing values  
-- Outlier detection and mitigation  
-- **One-hot encoding** for categorical variables  
-- **StandardScaler** for numeric variables  
-- Train-test split with justification  
-- End-to-end **ColumnTransformer + Pipeline** ensuring:
-  - No data leakage  
-  - Reproducible transformations  
-  - Compatibility with all regression/classification models  
+1. **Removed `student_id`** (non-predictive)  
+2. **Separated numeric and categorical variables**  
+3. **Scaled numeric features** using `StandardScaler`  
+4. **Encoded categorical features** using `OneHotEncoder(handle_unknown="ignore")`  
+5. **Built a unified preprocessing pipeline** using `ColumnTransformer`  
+6. **Integrated preprocessing + model into one Pipeline** to prevent leakage  
+
+### Why Use a Pipeline?
+
+- Ensures consistent transformation  
+- Prevents test data leakage  
+- Enables modular model swapping  
+- Fully compatible with cross-validation and grid search  
 
 ---
 
 ## 🤖 Modeling <a id="modeling"></a>
 
-Both predictive (regression) and decision-based (classification) models were developed.
-
-### 📈 Regression Models (Predicting Probability)
+### Regression Models
 - Linear Regression  
 - Ridge Regression  
 - Random Forest Regressor  
 - Gradient Boosting Regressor  
 
-### 🧮 Classification Models (Admit vs. Reject)
+### Classification Models
 - Logistic Regression  
 - Random Forest Classifier  
 
-### 📏 Evaluation Metrics
+### Evaluation Metrics  
 | Task | Metrics |
 | :--- | :--- |
 | **Regression** | RMSE, MAE, R² |
-| **Classification** | Confusion Matrix, Precision, Recall, F1, ROC-AUC |
+| **Classification** | Accuracy, F1, Precision, Recall, Confusion Matrix, ROC-AUC |
 
 ---
 
 ## 📊 Results & Insights <a id="results--insights"></a>
 
-### 📌 Key Results
-- Comprehensive comparison table for all models  
-- Predicted vs. Actual regression performance plots  
-- ROC-AUC comparison for classification models  
-- Feature importance visualization  
+### ⭐ Best Regression Model  
+### **Random Forest Regressor**  
+- **R² = 0.9317**  
+- **RMSE = 0.0825**  
+- **MAE = 0.01705**  
+- Excellent fit with near-perfect predicted vs actual alignment  
+- Captures non-linear relationships effectively  
 
-### 🔍 Analytical Insights
-- **Entrance exam score** is the strongest predictor of admission probability  
-- Socioeconomic and extracurricular features show **moderate predictive impact**  
-- Non-linear models (Random Forest, Gradient Boosting) outperform linear models → indicating complex relationships within the data  
+### ⭐ Best Classification Model  
+### **Logistic Regression**  
+- **ROC-AUC = 0.9999**  
+- **Accuracy = 98%**  
+- **F1 = 0.94 (macro)**  
+- Most interpretable model → ideal for admissions decision support  
 
-### 🧭 Recommended Modeling Strategy
-1. **Gradient Boosting Regression** → Best for accurate probability scoring  
-2. **Random Forest Classification** → Best for threshold-based admission decisions  
+### Key Insights
+- Academic metrics (board percentage, entrance score) drive admission outcomes  
+- Extracurriculars act as secondary—but meaningful—predictors  
+- Demographic variables show minimal influence, supporting fairness  
+- Tree-based models outperform linear ones due to non-linear relationships  
+
+### Business Recommendations
+- Use **Random Forest** for probability scoring  
+- Use **Logistic Regression** for explainable decision-making  
+- Provide applicant feedback using model insights  
+- Implement fairness audits and yearly model retraining  
+- Enhance academic readiness programs for borderline applicants  
 
 ---
 
 ## ⚖️ Ethics & Responsible AI <a id="ethics--responsible-ai"></a>
 
-A full ethics section (1–2 pages) is included in the final report.
+A full ethics analysis is included in the final report.
 
-### Topics Covered
-- Bias & fairness concerns related to demographic features  
-- Accountability and transparency of automated admissions tools  
-- Privacy considerations (student data, institutional policy)  
-- Responsible deployment & ongoing monitoring  
+### Topics Addressed
+- Potential biases hidden within academic metrics  
+- Fairness risks from socioeconomic disparities  
+- Privacy & FERPA compliance  
+- Transparent decision support, not automated decision-making  
+- Recommendations for explainability tools (SHAP/LIME)  
 
 ---
 
 ## 📝 Final Report (10–12 Pages) <a id="final-report-1012-pages"></a>
 
-📥 *Upload your final PDF and include the link here:*  
-👉 **[Insert Final Report PDF]**
+📥 *Upload your final PDF and insert the link:*  
+👉 **[Insert PDF Link Here]**
 
-### Report Structure
+### Report Sections
 1. Executive Summary  
 2. Introduction & Business Context  
 3. Exploratory Data Analysis  
-4. **Methodology: Preprocessing & Modeling**  
-5. Model Comparison & Interpretation  
+4. Methodology: Preprocessing & Modeling  
+5. Model Results & Interpretation  
 6. Business Insights & Recommendations  
-7. Ethics & Responsible AI Analysis  
+7. Ethics & Responsible AI  
 8. Conclusion & Future Work  
-9. **References & Acknowledgments**  
-   - Includes citation of tools: *Google Gemini*, *ChatGPT*, etc.
+9. References & AI Assistance (ChatGPT + Google Gemini)  
 
 ---
 
@@ -181,4 +204,3 @@ A full ethics section (1–2 pages) is included in the final report.
 | **Institution** | Suffolk University |
 
 ---
-
