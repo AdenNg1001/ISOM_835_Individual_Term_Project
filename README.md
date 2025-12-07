@@ -1,12 +1,12 @@
 # 🎓 College Admission Predictive Analysis
 
-### *Predictive Analytics & Machine Learning Term Project (ISOM 835)*
+### *Predictive Analytics & Machine Learning — Term Project (ISOM 835)*
 
 | | | | |
 | :---: | :---: | :---: | :---: |
-| **Instructor** | Hasan Arslan | **Type** | Individual Project |
+| **Professor** | Hasan Arslan | **Project Type** | Individual |
 | **Student** | Pham Thien An, Nguyen | **Student ID** | UID010043123 |
-| **Due Date** | December 12th, 11:59 PM | | |
+| **Due Date** | December 12, 11:59 PM | | |
 
 ---
 
@@ -14,162 +14,159 @@
 
 | Section | Link | Section | Link |
 | :---: | :---: | :---: | :---: |
-| **Project Overview** | [Overview](#project-overview) | **Preprocessing** | [Preprocessing](#data-cleaning--preprocessing) |
+| **Overview** | [Project Overview](#project-overview) | **Preprocessing** | [Preprocessing](#data-cleaning--preprocessing) |
 | **Dataset** | [Dataset](#dataset) | **Modeling** | [Modeling](#modeling) |
-| **EDA** | [EDA](#exploratory-data-analysis-eda) | **Results & Insights** | [Results](#results--insights) |
-| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Report](#final-report-1012-pages) |
+| **EDA** | [EDA](#exploratory-data-analysis-eda) | **Results** | [Results & Insights](#results--insights) |
+| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final Report](#final-report-1012-pages) |
 
 ---
 
 ## 📘 Project Overview <a id="project-overview"></a>
 
-This project applies the full **predictive analytics pipeline** to a real-world college admissions dataset. It simulates a professional analytics workflow, producing a **Google Colab notebook**, a **GitHub repository**, and a **10–12 page final report**.
+This project delivers a complete **end-to-end predictive analytics workflow** applied to a real-world college admissions dataset. It follows professional machine learning standards and includes a full **Google Colab notebook**, **GitHub repository**, and a structured **10–12 page report**.
 
-### Key Deliverables:
-* Dataset selection and rationale
-* **EDA** with a minimum of **6 visualizations**
-* Full preprocessing pipeline
-* Comparison of **Regression** and **Classification** models
-* Performance comparison and evaluation
-* Business insights & recommendations
-* Ethics and Responsible AI reflection
+### 🔑 Key Deliverables
+- Dataset acquisition & justification  
+- **EDA** with 6+ visualizations  
+- Full preprocessing pipeline  
+- Regression & classification model development  
+- Performance evaluation & comparison  
+- Business insights & actionable recommendations  
+- Ethics & Responsible AI considerations  
 
 ---
 
 ## 📂 Dataset <a id="dataset"></a>
 
-### **Dataset Used**
-📌 **College Admission Predictive Analysis Dataset**
-🔗 **Dataset link:** [SharePoint Link - Access may require login](https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT)
+### Dataset Used  
+📌 **College Admission Predictive Analysis Dataset**  
+🔗 *Dataset link:*  
+[SharePoint (Login Required)](https://sumail-my.sharepoint.com/:x:/g/personal/jpn11395_su_suffolk_edu/Ed-oKhwyPLxDt8VDowXCgfIB_TX792GrBTQ1AGCg0gjqzg?e=XMmMpT)
 
-| Requirement | Detail |
+| Requirement | Description |
 | :--- | :--- |
-| **Type** | Real-world, multi-variable data |
-| **Observations** | [Insert Number] |
-| **Features** | [Insert Number] |
-| **Target** | `admission_probability` (Numeric) |
+| **Type** | Real-world, multivariable dataset |
+| **Observations** | *[Insert]* |
+| **Features** | *[Insert]* |
+| **Target Variable** | `admission_probability` |
 
-### **Dataset Rationale**
-I selected this dataset because college admissions represent a highly relevant real-world prediction problem. Universities rely on data-driven decision-making to evaluate applicants, and students also seek transparency about the factors affecting their admission chances.
+### Why This Dataset?
+College admissions involve complex decision-making influenced by academic, demographic, and extracurricular factors. This dataset is ideal because it offers:
+- A rich blend of **numeric and categorical variables**  
+- A defined prediction target suitable for regression and classification  
+- High relevance for educational institutions and applicants  
+- Sufficient data size for robust modeling  
 
-This dataset offers:
-* Rich multi-variable data (scores, demographics, academic history).
-* Both **numeric** and **categorical** features suitable for modeling.
-* A clearly defined prediction target (`admission_probability`).
-* Enough observations for reliable machine learning analysis.
-
-### **Problem Statement**
-> **Can we accurately predict a student's probability of being admitted to college and identify the key variables driving that prediction?**
-
-### **Target Variable**
-🎯 **`admission_probability`**
-
-This variable is crucial because:
-* It enables a *probabilistic* assessment of admission chances.
-* Supports both regression (predicting the probability) and classification (predicting admission success based on a threshold) frameworks.
-* Helps identify the most influential admission factors for interpretation.
+### 🎯 Problem Statement
+> **Can we accurately predict a student’s likelihood of admission and identify the variables that most strongly influence admissions decisions?**
 
 ---
 
 ## 🔍 Exploratory Data Analysis (EDA) <a id="exploratory-data-analysis-eda"></a>
 
-📄 **Google Colab Notebook:**
-👉 [https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
+📄 **Google Colab Notebook:**  
+👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing
 
-### EDA Highlights:
-* Dataset structure review and summary statistics.
-* Missing value analysis and handling.
-* Visualizations (minimum 6 plots): Histograms, Boxplots for outlier detection, Correlation heatmap, Scatterplot relationships, and Pairplot matrix.
-* All visualizations are interpreted to guide subsequent modeling decisions.
+### EDA Highlights
+- Dataset structure, datatypes, and descriptive statistics  
+- Missing value exploration and treatment strategy  
+- Outlier examination using boxplots  
+- **6+ visualizations**, including:  
+  - Histograms  
+  - Pairplots  
+  - Scatterplots  
+  - Correlation heatmap  
+- Insights guided preprocessing and modeling choices  
 
 ---
 
 ## 🧹 Data Cleaning & Preprocessing <a id="data-cleaning--preprocessing"></a>
 
-Notebook:
-👉 [https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
+Notebook:  
+👉 https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing
 
-### Preprocessing Steps:
-* Handling missing values (documentation of strategy).
-* Outlier review and treatment.
-* **One-hot encoding** for categorical variables.
-* **Scaling** numeric features using `StandardScaler`.
-* Creation of a robust **train-test split**.
-* Implementation of the Scikit-learn **`ColumnTransformer`** pipeline for streamlined application of transformations.
+### 🔧 Preprocessing Workflow
+- Systematic handling of missing values  
+- Outlier detection and mitigation  
+- **One-hot encoding** for categorical variables  
+- **StandardScaler** for numeric variables  
+- Train-test split with justification  
+- End-to-end **ColumnTransformer + Pipeline** ensuring:
+  - No data leakage  
+  - Reproducible transformations  
+  - Compatibility with all regression/classification models  
 
 ---
 
 ## 🤖 Modeling <a id="modeling"></a>
 
-The project implemented and compared multiple model types as required, focusing on both prediction (Regression) and decision-making (Classification).
+Both predictive (regression) and decision-based (classification) models were developed.
 
-### **Regression Models (Predicting Probability)**
-* Linear Regression
-* Ridge Regression (Regularization)
-* Random Forest Regressor
-* Gradient Boosting Regressor
+### 📈 Regression Models (Predicting Probability)
+- Linear Regression  
+- Ridge Regression  
+- Random Forest Regressor  
+- Gradient Boosting Regressor  
 
-### **Classification Models (Predicting Admission Decision)**
-* Logistic Regression
-* Random Forest Classifier
+### 🧮 Classification Models (Admit vs. Reject)
+- Logistic Regression  
+- Random Forest Classifier  
 
-### **Evaluation Metrics**
-| Problem Type | Key Metrics |
+### 📏 Evaluation Metrics
+| Task | Metrics |
 | :--- | :--- |
-| **Regression** | RMSE (Root Mean Squared Error), MAE (Mean Absolute Error), $R^2$ (Coefficient of Determination) |
-| **Classification** | Confusion Matrix, Precision, Recall, F1-Score, ROC-AUC Score |
-
-All models and evaluations are fully documented in the linked Colab notebook.
+| **Regression** | RMSE, MAE, R² |
+| **Classification** | Confusion Matrix, Precision, Recall, F1, ROC-AUC |
 
 ---
 
 ## 📊 Results & Insights <a id="results--insights"></a>
 
-### Key Deliverables:
-* Comprehensive **Model Comparison Table** with performance metrics.
-* Predicted vs. Actual plots for regression models.
-* ROC-AUC comparison plot for classification models.
-* **Feature Importance** visualizations and analysis.
+### 📌 Key Results
+- Comprehensive comparison table for all models  
+- Predicted vs. Actual regression performance plots  
+- ROC-AUC comparison for classification models  
+- Feature importance visualization  
 
-### Business-Driven Insights:
-* **Entrance exam score** is the strongest, most consistent predictor of admission probability.
-* Socioeconomic factors and extracurricular activities have a **moderate, measurable impact** on the final prediction.
-* **Tree-based models** (Random Forest, Gradient Boosting) consistently outperformed linear models, suggesting **non-linear patterns** in the admissions data.
+### 🔍 Analytical Insights
+- **Entrance exam score** is the strongest predictor of admission probability  
+- Socioeconomic and extracurricular features show **moderate predictive impact**  
+- Non-linear models (Random Forest, Gradient Boosting) outperform linear models → indicating complex relationships within the data  
 
-### Recommended Modeling Strategy:
-1.  **Regression Model** (e.g., Gradient Boosting) for **probability scoring** (providing the most granular risk assessment).
-2.  **Classifier Model** (e.g., Random Forest) for **admission decision thresholding** (determining a simple 'Admit/Reject' based on the best F1/Recall score).
+### 🧭 Recommended Modeling Strategy
+1. **Gradient Boosting Regression** → Best for accurate probability scoring  
+2. **Random Forest Classification** → Best for threshold-based admission decisions  
 
 ---
 
 ## ⚖️ Ethics & Responsible AI <a id="ethics--responsible-ai"></a>
 
-A dedicated 1–2 page reflection on responsible AI is included in the final report.
+A full ethics section (1–2 pages) is included in the final report.
 
-### Reflection Topics:
-* **Fairness** and potential biases across demographic groups in admissions.
-* **Privacy** and confidentiality concerns related to using student records.
-* **Transparency and Explainability** requirements for stakeholders (students, administrators).
-* Ethical deployment and monitoring of predictive tools in the education sector.
+### Topics Covered
+- Bias & fairness concerns related to demographic features  
+- Accountability and transparency of automated admissions tools  
+- Privacy considerations (student data, institutional policy)  
+- Responsible deployment & ongoing monitoring  
 
 ---
 
 ## 📝 Final Report (10–12 Pages) <a id="final-report-1012-pages"></a>
 
-📥 **Final Report (PDF)**
-*(Upload your PDF here once completed and paste the link below)*
+📥 *Upload your final PDF and include the link here:*  
+👉 **[Insert Final Report PDF]**
 
-👉 *[Insert PDF Link Here]*
-
-### Report Sections Include:
-1.  Executive Summary
-2.  Introduction & Business Context
-3.  Exploratory Data Analysis (min 6 plots)
-4.  Methodology (Preprocessing & Modeling)
-5.  Results & Model Comparison
-6.  Business Insights & Recommendations
-7.  Ethics & Responsible AI Reflection
-8.  Conclusion & Future Work
+### Report Structure
+1. Executive Summary  
+2. Introduction & Business Context  
+3. Exploratory Data Analysis  
+4. **Methodology: Preprocessing & Modeling**  
+5. Model Comparison & Interpretation  
+6. Business Insights & Recommendations  
+7. Ethics & Responsible AI Analysis  
+8. Conclusion & Future Work  
+9. **References & Acknowledgments**  
+   - Includes citation of tools: *Google Gemini*, *ChatGPT*, etc.
 
 ---
 
@@ -180,7 +177,8 @@ A dedicated 1–2 page reflection on responsible AI is included in the final rep
 | **Name** | Pham Thien An, Nguyen |
 | **Student ID** | UID010043123 |
 | **Course** | ISOM 835 – Predictive Analytics & Machine Learning |
-| **Instructor** | Hasan Arslan |
+| **Professor** | Hasan Arslan |
 | **Institution** | Suffolk University |
 
 ---
+
