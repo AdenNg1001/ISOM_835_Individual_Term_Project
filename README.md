@@ -46,8 +46,8 @@ This project delivers a complete **end-to-end predictive analytics workflow** ap
 | Requirement | Description |
 | :--- | :--- |
 | **Type** | Real-world, multivariable dataset |
-| **Observations** | *[Insert]* |
-| **Features** | *[Insert]* |
+| **Observations** | 25,000 |
+| **Features** | 13 |
 | **Target Variable** | `admission_probability` |
 
 ### Why This Dataset?
