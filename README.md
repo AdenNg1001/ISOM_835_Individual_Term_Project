@@ -18,7 +18,7 @@
 | **EDA** | [EDA](#exploratory-data-analysis-eda) | **Preprocessing** | [Data Cleaning & Preprocessing](#data-cleaning--preprocessing) |
 | **Modeling** | [Modeling](#modeling) | **Results** | [Results & Insights](#results--insights) |
 | **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final PDF Report (29 Pages)](#final-report-29-pages) |
-| **Citations** | [Citations & References](#citations-and-references) | | |
+| **Citations** | [Citations & References](#-citations--references) | | |
 
 ---
 
