@@ -192,6 +192,84 @@ A full ethics analysis is included in the final report.
 10. References & AI Assistance (ChatGPT + Google Gemini)  
 
 ---
+## 📚 Citations & References
+
+This project used external datasets, open-source tools, research resources, and community knowledge. All key sources are cited below.
+
+---
+
+### Dataset Source & Documentation
+
+- **College Admission Prediction Dataset** (2024).  
+  Provided through Kaggle.  
+- Dataset documentation and data dictionary accompanying the shared Excel file.
+
+---
+
+### Code References & Adapted Tutorials
+
+Some preprocessing, visualization, and modeling patterns were adapted from standard examples in the following sources:
+
+- **Scikit-learn Documentation**  
+  Pipelines, `ColumnTransformer`, `OneHotEncoder`, `StandardScaler`, regression and classification models, and evaluation utilities.  
+  https://scikit-learn.org/stable/documentation.html
+
+- **Matplotlib Documentation & Gallery**  
+  Used for figure setup, styling, and exporting plots.  
+  https://matplotlib.org/stable/gallery/index.html
+
+- **Seaborn Tutorials**  
+  Used for statistical visualizations such as histograms, boxplots, pairplots, and correlation heatmaps.  
+  https://seaborn.pydata.org/tutorial.html
+
+- **Stack Overflow**  
+  Selected snippets were referenced to debug issues related to:
+  - Pipeline integration  
+  - Confusion matrix plotting  
+  - ROC curve implementation  
+  (Exact posts available upon request.)
+
+---
+
+### Research Papers & Articles
+
+The following academic and technical references informed the modeling choices, evaluation, and ethical discussion:
+
+- Breiman, L. (2001). **Random Forests**. *Machine Learning*.  
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression*.  
+- Ribeiro, M. T., Singh, S., & Guestrin, C. (2016).  
+  “**Why Should I Trust You?**: Explaining the Predictions of Any Classifier.”  
+- High-level Responsible AI and fairness guidelines from:
+  - OECD AI Principles  
+  - Google Responsible AI documentation  
+
+These works shaped the interpretation of results, the choice of ensemble methods, and the focus on explainability and fairness.
+
+---
+
+### Python Libraries & Tools Used
+
+The project was implemented using the following tools and open-source libraries:
+
+- **Python 3.x**
+- **Pandas** – data loading, cleaning, and transformation  
+- **NumPy** – numerical operations and array handling  
+- **Scikit-learn** – preprocessing, pipelines, regression and classification models, evaluation metrics  
+- **Matplotlib** – core plotting and figure customization  
+- **Seaborn** – higher-level statistical visualizations  
+- **SHAP** (optional) – model explainability and feature contribution analysis  
+- **Google Colab / Jupyter Notebook** – interactive development and experimentation  
+
+All libraries are open-source and used under their respective licenses for academic purposes.
+
+---
+
+### AI Assistance Acknowledgment
+
+Portions of the project documentation and report text (including wording refinement, structure, and explanation clarity) were assisted by **OpenAI ChatGPT** and **Google Gemini**.  
+All code implementation, experimental design, model selection, and final interpret
+
+---
 
 ## 👨‍💻 Author
 
