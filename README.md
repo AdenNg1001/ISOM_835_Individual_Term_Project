@@ -70,8 +70,6 @@ Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a *
 
 📄 **Google Colab Notebook Link:* [ISOM 835_Individual Term Project.ipynb](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
 
-https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing 
-
 ### EDA Highlights
 
 - Dataset summary statistics (25,000 observations)
@@ -126,7 +124,7 @@ https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sh
 ### Evaluation Metrics  
 | Task | Metrics |
 | :--- | :--- |
-| **Regression** | RMSE, MAE, R² |
+| **Regression** | RMSE, MAE, R^2 |
 | **Classification** | Accuracy, F1, Precision, Recall, Confusion Matrix, ROC-AUC |
 
 ---
@@ -183,13 +181,14 @@ A full ethics analysis is included in the final report.
 ### Report Sections
 1. Executive Summary  
 2. Introduction & Business Context  
-3. Exploratory Data Analysis  
+3. Exploratory Data Analysis (EDA)  
 4. Methodology: Preprocessing & Modeling  
-5. Model Results & Interpretation  
-6. Business Insights & Recommendations  
-7. Ethics & Responsible AI  
-8. Conclusion & Future Work  
-9. References & AI Assistance (ChatGPT + Google Gemini)  
+5. Regression Modeling  
+6. Classification Modeling  
+7. Business Insights & Recommendations  
+8. Ethics & Responsible AI Reflection  
+9. Conclusion & Future Work
+10. References & AI Assistance (ChatGPT + Google Gemini)  
 
 ---
 
