@@ -17,7 +17,7 @@
 | **Overview** | [Project Overview](#project-overview) | **Dataset** | [Dataset](#dataset) |
 | **EDA** | [EDA](#exploratory-data-analysis-eda) | **Preprocessing** | [Data Cleaning & Preprocessing](#data-cleaning--preprocessing) |
 | **Modeling** | [Modeling](#modeling) | **Results** | [Results & Insights](#results--insights) |
-| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final PDF Report (29 Pages)](#final-report-29-pages) |
+| **Ethics** | [Ethics](#ethics--responsible-ai) | **Final Report** | [Final PDF Report](#final-report) |
 | **Citations** | [Citations & References](#-citations--references) | | |
 
 ---
@@ -176,7 +176,7 @@ A full ethics analysis is included in the final report.
 
 ---
 
-## 📝 Final PDF Report (29 Pages) <a id="final-report-29-pages"></a>
+## 📝 Final PDF Report <a id="final-report"></a>
 
 👉 *PDF File link:* [ISOM835_FinalAssignmentReport_AnNguyen_UID010043123.pdf](https://drive.google.com/file/d/1ryhMSP1VY_GbJrpTVEWU9CpJkwltuVbp/view?usp=sharing)
 
