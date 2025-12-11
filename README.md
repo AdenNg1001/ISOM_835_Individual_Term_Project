@@ -152,7 +152,7 @@ Two predictive tasks were implemented:
 ### **Random Forest Regressor**  
 The **Random Forest Regressor** clearly outperformed the other regression models.
 
-- **R² ≈ 0.93** (explains ~93% of the variance in admission probability)  
+- **R² ≈ 0.99** (explains ~99% of the variance in admission probability)  
 - Very low RMSE and MAE  
 - Predicted vs. Actual plot shows points tightly clustered along the 45° line  
 
@@ -229,7 +229,7 @@ Because admissions decisions are **high-stakes**, the project includes a dedicat
 
 ## 📝 Final PDF Report <a id="final-report"></a>
 
-👉 *PDF File link:* [ISOM835_FinalAssignmentReport_AnNguyen_UID010043123.pdf](https://drive.google.com/file/d/1ryhMSP1VY_GbJrpTVEWU9CpJkwltuVbp/view?usp=sharing)
+👉 *PDF File link:* [ISOM835_FinalAssignmentReport_AnNguyen_UID010043123.pdf](https://drive.google.com/file/d/16WXZHYXOr7J-NbMJlpoC3W8LTf724OUm/view?usp=sharing)
 
 ### Report Sections
 1. Executive Summary  
@@ -333,5 +333,3 @@ All code implementation, experimental design, model selection, and final interpr
 | **Institution** | Suffolk University |
 
 ---
-
-
