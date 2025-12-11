@@ -70,26 +70,37 @@ Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a *
 
 📄 **Google Colab Notebook Link:* [ISOM 835_Individual Term Project.ipynb](https://colab.research.google.com/drive/18l3jiyF7uviz2DRrhv8JpW-H63Fw8Qom?usp=sharing)
 
-### EDA Highlights
+### Main Steps
 
-- Dataset summary statistics (25,000 observations)
-- No missing values detected
-- Several visualizations:
-  - Histograms (numeric features)
-  - Boxplots (outlier detection)
-  - Correlation heatmap
-  - Scatterplot (Entrance Score vs. Admission Probability)
-  - Gender comparison bar plot
-  - Pairplot scatter matrix
-- Key numerical insights:
-  - **Board Percentage (0.73)** → strongest correlation with admission
-  - **Entrance Score (0.55)** → second strongest predictor
-  - **Extracurricular Score (0.40)** → moderate influence
-  - Demographics show minimal predictive correlation
+- Summary statistics for all numeric and categorical features  
+- Histograms for age, entrance_score, board_percentage, extracurricular_score, admission_probability  
+- Boxplots to detect outliers, especially in entrance_score  
+- Correlation heatmap between numeric variables  
+- Scatterplot: **Entrance Score vs. Admission Probability**  
+- Grouped bar chart: **Average Admission Probability by Gender**  
+- Pairplot / scatter matrix to visualize multivariate patterns  
+
+### Key EDA Insights
+
+- **Board Percentage** is the **strongest predictor** of `admission_probability`  
+  - Correlation ≈ **0.73**  
+- **Entrance Score** is the **second strongest** predictor  
+  - Correlation ≈ **0.55**  
+- **Extracurricular Score** has a **moderate but meaningful** impact  
+  - Correlation ≈ **0.40**  
+- Demographic variables such as **age, gender, and state** show **minimal correlation** with admission probability  
+- Several **outliers** exist in `entrance_score` (> 500), but they are handled well by tree-based models  
+- **No missing values** were found, simplifying preprocessing  
+- Relationships show both **linear and nonlinear** behavior → motivates using **linear + ensemble methods**
 
 ---
 
 ## 🧹 Data Cleaning & Preprocessing <a id="data-cleaning--preprocessing"></a>
+
+### Missing Value Check
+
+Before beginning preprocessing, the dataset was reloaded and inspected for missing values.  
+No missing values were found in any column, confirming the dataset is complete and requires no imputation.
 
 ### Preprocessing Steps (as implemented)
 
@@ -102,14 +113,19 @@ Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a *
 
 ### Why Use a Pipeline?
 
-- Ensures consistent transformation  
-- Prevents test data leakage  
-- Enables modular model swapping  
-- Fully compatible with cross-validation and grid search  
+- **Prevents data leakage** (fit on train only, transform train + test)  
+- Ensures **consistent preprocessing** across all models  
+- Makes it easy to **swap models** while reusing the same preprocessing  
+- Compatible with **GridSearchCV**, cross-validation, and metric evaluation    
 
 ---
 
 ## 🤖 Modeling <a id="modeling"></a>
+
+Two predictive tasks were implemented:
+
+1. **Regression** – predict `admission_probability`  
+2. **Classification** – predict `admitted` (0/1)
 
 ### Regression Models
 - Linear Regression  
@@ -134,44 +150,80 @@ Deliverables include a **Google Colab Notebook**, **GitHub Repository**, and a *
 
 ### ⭐ Best Regression Model  
 ### **Random Forest Regressor**  
-- **R² = 0.9317**  
-- **RMSE = 0.0825**  
-- **MAE = 0.01705**  
-- Excellent fit with near-perfect predicted vs actual alignment  
-- Captures non-linear relationships effectively  
+The **Random Forest Regressor** clearly outperformed the other regression models.
+
+- **R² ≈ 0.93** (explains ~93% of the variance in admission probability)  
+- Very low RMSE and MAE  
+- Predicted vs. Actual plot shows points tightly clustered along the 45° line  
+
+**Why it works well**
+
+- Captures **nonlinear interactions** between academic metrics and extracurriculars  
+- Robust to **outliers**, especially extreme entrance scores  
+- Handles mixed feature types after preprocessing
+  
 
 ### ⭐ Best Classification Model  
 ### **Logistic Regression**  
-- **ROC-AUC = 0.9999**  
-- **Accuracy = 98%**  
-- **F1 = 0.94 (macro)**  
-- Most interpretable model → ideal for admissions decision support  
+The **Logistic Regression** model achieved **near-perfect** classification performance:
+
+- **ROC–AUC ≈ 0.9999**  
+- **Accuracy ≈ 99%**  
+- Very high precision and recall for both classes  
+
+From the confusion matrix on the 5,000-row test set:
+
+- Correctly classifies **4435 / 4439** non-admitted students  
+- Correctly classifies **550 / 561** admitted students  
+- Only a small number of false positives and false negatives  
+
+**Why it’s preferred for deployment**
+
+- High predictive performance  
+- **Interpretable coefficients** → easier to explain to admissions officers  
+- Works well with the scaled + one-hot encoded feature space
+ 
 
 ### Key Insights
-- Academic metrics (board percentage, entrance score) drive admission outcomes  
-- Extracurriculars act as secondary—but meaningful—predictors  
-- Demographic variables show minimal influence, supporting fairness  
-- Tree-based models outperform linear ones due to non-linear relationships  
+From the modeling and EDA combined:
+
+1. **Academic performance is the primary driver**
+   - Board percentage and entrance exam scores are the most important predictors.
+2. **Extracurricular activities still matter**
+   - Provide a secondary positive contribution and support a **holistic** view.
+3. **Demographic bias appears limited in this dataset**
+   - Demographic variables have low predictive power relative to academic metrics.
+4. **Hybrid modeling approach is ideal**
+   - Use **Random Forest** for high-accuracy probability estimation.  
+   - Use **Logistic Regression** for **transparent, policy-friendly** decision support.
+  
 
 ### Business Recommendations
-- Use **Random Forest** for probability scoring  
-- Use **Logistic Regression** for explainable decision-making  
-- Provide applicant feedback using model insights  
-- Implement fairness audits and yearly model retraining  
-- Enhance academic readiness programs for borderline applicants  
+- Rank applicants by **predicted admission probability**.  
+- Provide admissions officers with:  
+  - Model probability  
+  - Key feature drivers (e.g., board % and entrance score)  
+- Consider slightly lowering the decision threshold (e.g., 0.50 → 0.45) when the goal is to **reduce false negatives** for borderline applicants.  
 
 ---
 
 ## ⚖️ Ethics & Responsible AI <a id="ethics--responsible-ai"></a>
 
-A full ethics analysis is included in the final report.
+Because admissions decisions are **high-stakes**, the project includes a dedicated ethics section.
 
-### Topics Addressed
-- Potential biases hidden within academic metrics  
-- Fairness risks from socioeconomic disparities  
-- Privacy & FERPA compliance  
-- Transparent decision support, not automated decision-making  
-- Recommendations for explainability tools (SHAP/LIME)  
+### Potential Risks
+
+- Academic metrics may encode **socioeconomic advantage** (tutoring access, school quality).  
+- Over-reliance on standardized tests can disadvantage under-resourced students.  
+- Regional (state-level) differences can reflect structural inequality.
+
+### Recommended Safeguards
+
+- Perform **annual fairness audits** across gender, category, and region.  
+- Monitor error rates (false positives/negatives) by subgroup.  
+- Use explainability tools (e.g., **SHAP**, **LIME**) to document how features influence predictions.  
+- Keep **humans-in-the-loop** — the model should assist, not replace, admissions officers.  
+- Ensure strong **data governance**: FERPA compliance, encryption, access control, and audit logs.
 
 ---
 
@@ -281,3 +333,5 @@ All code implementation, experimental design, model selection, and final interpr
 | **Institution** | Suffolk University |
 
 ---
+
+
