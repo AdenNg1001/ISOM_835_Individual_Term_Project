@@ -229,7 +229,7 @@ Because admissions decisions are **high-stakes**, the project includes a dedicat
 
 ## 📝 Final PDF Report <a id="final-report"></a>
 
-👉 *PDF File link:* [ISOM835_FinalAssignmentReport_AnNguyen_UID010043123.pdf](https://drive.google.com/file/d/16WXZHYXOr7J-NbMJlpoC3W8LTf724OUm/view?usp=sharing)
+👉 *PDF File link:* [ISOM835_FinalAssignmentReport_Pham Thien An Nguyen_UID010043123](https://drive.google.com/file/d/16WXZHYXOr7J-NbMJlpoC3W8LTf724OUm/view?usp=sharing)
 
 ### Report Sections
 1. Executive Summary  
